@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Custom</string>
+    <string name="progress_bar">Widget/ProgressBar</string>
+    <string name="text_view">Widget/TextView</string>
+    <string name="network">App/Network</string>
+    <string name="demo">Demo/Mute</string>
+    <string name="disk">Demo/Disk</string>
+    <string name="reflection">Demo/Reflection</string>
+    <string name="metadata">Demo/MetadataRetriever</string>
+    <string name="titlebar">App/TitleBar</string>
+    <string name="market">App/Market</string>
+    <string name="layout">Demo/LayoutDemo</string>
+    <string name="animation">Demo/Animation</string>
+    <string name="ninepatch">Demo/Ninepatch</string>
+    <string name="shape">Demo/Shape</string>
+    <string name="actionbar">Demo/ActionBar</string>
+
+    <string name="text">"测试程序：#@901 jgyfl"</string>
+    <string name="clean_process">clean process</string>
+    <string name="callback">callback:</string>
+    <string name="clickbtn">click</string>
+
+    <string name="idaddr">"172.23.67.185"</string>
+    <string name="netmask">"255.255.0.0"</string>
+    <string name="gateway">"172.23.65.247"</string>
+    <string name="dns">"202.103.24.65"</string>
+    <string name="dns1">"8.8.8.8"</string>
+
+    <string name="mute_screen">Mute Screen</string>
+    <string name="config">Config</string>
+    <string name="static_ip">Static</string>
+    <string name="type_ethernet">Ethernet</string>
+    <string name="type_wifi">Wi-Fi</string>
+    <string name="sdcard">sdcard : </string>
+    <string name="data">data : </string>
+    <string name="titlebar_title">设置</string>
+    <string name="titlebar_summary">"网络设置  >  有线设置"</string>
+    <string name="titlebar_symbol">"  >  "</string>
+    <string name="animation_start">"启动"</string>
+</resources>

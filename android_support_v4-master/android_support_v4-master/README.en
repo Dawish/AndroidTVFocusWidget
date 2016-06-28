@@ -1,0 +1,10 @@
+android_support_v4
+==================
+
+add android feature introduced in newer version.
+now support:
+1) Horizontal ListView, Horizontal GridView;
+2) DownloadManager
+
+to be added:
+

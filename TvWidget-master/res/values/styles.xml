@@ -1,0 +1,50 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppThemeCommon" parent="android:Theme.Light">
+        <item name="android:windowBackground">@drawable/activity_bg</item>
+        <item name="android:windowTitleBackgroundStyle">@android:color/transparent</item>
+    </style>
+
+    <style name="AppThemeMain" parent="AppThemeCommon">
+        <item name="android:windowTitleSize">100dp</item>
+    </style>
+
+    <style name="AppThemeModule" parent="AppThemeCommon">
+        <item name="android:windowTitleSize">180dp</item>
+    </style>
+
+    <style name="MarketTheme" parent="android:Theme.Light">
+        <item name="android:windowBackground">@drawable/activity_bg</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ActionBarTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarSize">100dp</item>
+        <item name="android:height">20dp</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/activity_bg</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:itemPadding">8dip</item>
+    </style>
+
+</resources>

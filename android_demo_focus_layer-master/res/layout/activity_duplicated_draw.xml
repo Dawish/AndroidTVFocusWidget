@@ -1,0 +1,32 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimationFocusLayerActivity" >
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="1"
+        android:singleLine="true"
+        android:visibility="gone" />
+
+    <view
+        android:id="@+id/src"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_x="50dp"
+        android:layout_y="50dp"
+        class="org.bangbang.song.demo.focuslayer.DuplicatedDrawActivity$MySource"
+        android:text="string/hello_worldbsdfasdfdsafadsfadsfasdfasf" />
+
+    <view
+        android:id="@+id/dest"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_x="50dp"
+        android:layout_y="200dp"
+        class="org.bangbang.song.demo.focuslayer.DuplicatedDrawActivity$MyDestination" />
+
+</AbsoluteLayout>

@@ -1,0 +1,12 @@
+android_support_v4
+==================
+提供Android在1.6(v4)以后增加的新功能
+目前包括:
+　1) Horizontal ListView (横向滚动ListView) Horizontal GridView (横向滚动GridView);
+      该实现基于Android v4版本，从AdapterView开始，取出对应原码，将View/ViewGroup的测量(measure)，布局(layout)
+由上到下，相应调整为由左到右，支持ListView, GridView所有的功能。
+  2) DownloadManager (从v9开始出现)  
+　　　该实现基于Android v１７版本。
+
+即将提供的功能:
+

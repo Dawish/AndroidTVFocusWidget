@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical" >
+
+    <view
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        class="org.bangbang.song.demo.focuslayer.ListViewAnimationAcitivity$MyLayout"
+        android:clipChildren="false"
+        android:clipToPadding="false" >
+
+        <view
+            android:id="@+id/textView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_x="340dp"
+            android:layout_y="8dp"
+            class="org.bangbang.song.demo.focuslayer.ListViewAnimationAcitivity$MyButton"
+            android:text="TextView" />
+    </view>
+
+</LinearLayout>

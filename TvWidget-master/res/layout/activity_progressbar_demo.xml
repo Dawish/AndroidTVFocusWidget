@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/custom.droid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:text="@string/clickbtn" />
+
+    <custom.droid.widget.CustomProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:bitmap="@drawable/rocket"
+        custom:blurenable="true"
+        custom:max="200"
+        custom:progress="50"
+        custom:radius="@dimen/custom_progressbar_radius"
+        custom:text="@string/clean_process"
+        custom:textcolor="@color/custom_progressbar_solid_green"
+        custom:textsize="@dimen/custom_progressbar_textsize" />
+
+</LinearLayout>

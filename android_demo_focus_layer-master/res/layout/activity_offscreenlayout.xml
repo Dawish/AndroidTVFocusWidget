@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="50dp" >
+
+        <view
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="org.bangbang.song.focuslayer.OffScreenLayout" >
+
+            <LinearLayout
+                android:id="@+id/src"
+                android:layout_width="300dp"
+                android:layout_height="500dp"
+                android:visibility="visible"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="100"
+                    android:singleLine="true"
+                    android:text="looooooooooooooooooooooooooooooooong text" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="100"
+                    android:singleLine="true"
+                    android:tag="offscreen"
+                    android:text="lonnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnng text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dest"
+                android:layout_width="100dp"
+                android:layout_height="500dp"
+                android:orientation="vertical"
+                android:tag="offscreen" >
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="100"
+                    android:singleLine="true"
+                    android:text="looooooooooooooooooooooooooooooooong text" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="100"
+                    android:singleLine="true"
+                    android:text="lonnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnng text" />
+            </LinearLayout>
+        </view>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="1"
+        android:singleLine="true"
+        android:text="looooooooooooooooooooooooooooooooong text"
+        android:visibility="gone" />
+
+</RelativeLayout>

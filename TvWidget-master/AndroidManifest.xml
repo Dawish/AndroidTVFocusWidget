@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="custom.droid"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- android:sharedUserId="android.uid.system" -->
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/> -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/default_icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".CustomActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".widget.ProgressBarDemo"
+            android:label="@string/progress_bar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".widget.TextViewDemo"
+            android:label="@string/text_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".disk.DiskDemo"
+            android:label="@string/disk" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".reflection.ReflectionDemo"
+            android:label="@string/reflection" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".metadata.MediaMetadataRetrieverDemo"
+            android:label="@string/metadata" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".titlebar.TitleBarDemo"
+            android:label="@string/titlebar"
+            android:theme="@style/AppThemeMain" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".market.MarketActivity"
+            android:label="@string/market"
+            android:theme="@style/MarketTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".layout.LayoutDemo"
+            android:label="@string/layout" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".animation.AnimationDemo"
+            android:label="@string/animation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ninepatch.NinepatchDemo"
+            android:label="@string/ninepatch" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".shape.ShapeDemo"
+            android:label="@string/shape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".actionbar.ActionBarDemo"
+            android:label="@string/actionbar"
+            android:theme="@style/ActionBarTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="custom.droid.category.TEST_CODE" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

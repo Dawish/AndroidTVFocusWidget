@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomProgressBar">
+        <attr name="android:layout_gravity" />
+        <attr name="text" format="string" />
+        <attr name="bitmap" format="reference" />
+        <attr name="textsize" format="dimension" />
+        <attr name="textcolor" format="color" />
+        <attr name="blurenable" format="boolean" />
+        <attr name="progress" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="radius" format="dimension" />
+        <attr name="layout_position">
+            <enum name="MIDDLE" value="0" />
+            <enum name="LEFT" value="1" />
+            <enum name="RIGHT" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

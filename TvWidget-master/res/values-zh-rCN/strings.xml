@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="text">"测试程序：#@901 jgyfl"</string>
+    <string name="clean_process">"清理进度"</string>
+    <string name="callback">回传结果:</string>
+    <string name="clickbtn">点击</string>
+    <string name="mute_screen">"关屏"</string>
+    <string name="config">"配置"</string>
+    <string name="static_ip">"静态"</string>
+    <string name="type_ethernet">"有线"</string>
+    <string name="type_wifi">"Wi-Fi"</string>
+    <string name="sdcard">"SD卡 : "</string>
+    <string name="data">"内部存储 : "</string>
+
+</resources>

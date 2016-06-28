@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- corresponding to android AbsListView -->
+    <declare-styleable name="HAbsListView">
+        <attr name="drawSelectorOnTop" format="reference|boolean"></attr>
+        <attr name="listSelector" format="reference"></attr>
+        <attr name="scrollingCache" format="reference|boolean"></attr>
+        <attr name="textFilterEnabled" format="reference|boolean"></attr>
+        <attr name="cacheColorHint" format="reference|color"></attr>
+        <attr name="fastScrollEnabled" format="reference|boolean"></attr>
+        <attr name="smoothScrollbar" format="reference|boolean"></attr>
+    </declare-styleable>
+	<!-- corresponding to android GridView -->
+    <declare-styleable name="HGridView">
+        <attr name="horizontalSpacing" format="reference|integer"></attr>
+        <attr name="verticalSpacing" format="reference|integer"></attr>
+        <attr name="stretchMode" format="reference|integer"></attr>
+        <attr name="rowHeight" format="reference|integer"></attr>
+        <attr name="numRows" format="reference|integer"></attr>
+        <attr name="gravity" format="reference|boolean"></attr>
+    </declare-styleable>	
+    <!-- corresponding to android ListView -->
+    <declare-styleable name="HListView">
+        <attr name="entries" format="reference"></attr>
+        <attr name="divider" format="reference"></attr>
+        <attr name="dividerWidth" format="reference|integer"></attr>
+        <attr name="choiceMode" format="reference|integer"></attr>
+        <attr name="footerDividersEnabled" format="reference|boolean"></attr>
+        <attr name="headerDividersEnabled" format="reference|boolean"></attr>
+    </declare-styleable>
+
+</resources>

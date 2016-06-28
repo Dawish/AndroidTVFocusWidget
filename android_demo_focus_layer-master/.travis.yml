@@ -1,0 +1,56 @@
+language: java
+
+env:
+    matrix:
+#    - ANDROID_SDKS=sysimg-8           ANDROID_TARGET=android-8   ANDROID_ABI=armeabi
+#    - ANDROID_SDKS=sysimg-10           ANDROID_TARGET=android-10  ANDROID_ABI=armeabi
+    - ANDROID_SDKS=sysimg-16            ANDROID_TARGET=android-16  ANDROID_ABI=armeabi-v7a
+    - ANDROID_SDKS=android-17,sysimg-17 ANDROID_TARGET=android-17  ANDROID_ABI=armeabi-v7a
+
+before_install:
+    - sudo apt-get update -qq
+    - if [ `uname -m` = x86_64 ] ; then sudo apt-get install -qq --force-yes libgd2-xpm ia32-libs ia32-libs-multiarch ; fi 
+
+    - wget http://dl.google.com/android/android-sdk_r21.0.1-linux.tgz
+    - tar -zxf android-sdk_r21.0.1-linux.tgz
+    - export ANDROID_HOME=`pwd`/android-sdk-linux
+    - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+
+    - android list target
+   
+    - android update sdk --filter platform-tools,android-16,extra-android-support,$ANDROID_SDKS --no-ui --force
+    - android list target
+    - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+    - emulator -avd test -no-skin -no-audio -no-window &
+# do this as later sa possiable
+#    - adb wait-for-device 
+    - android update project -p . -t $ANDROID_TARGET
+
+install:
+    - export LIB_DIR=../android_common_lib
+    - echo yes | git clone https://github.com/luoqii/android_common_lib $LIB_DIR
+    - source $LIB_DIR/buildscript/lib/common.sh
+# do this as later as possiabl.
+#    - wait_for_emulator
+    - rm project.properties
+    - update_lib_project . $LIB_DIR
+    - cat $LIB_DIR/project.properties
+    - cat $LIB_DIR/build.xml
+
+script:
+    - ant debug  
+
+# wait emulator ready.
+    - wait_for_emulator
+    - ant installd
+#    - exit 0
+#
+#    - cd test/unit
+#    - chmod a+x run_test.ant
+#    - adb devices
+#    - ./run_test.ant
+#
+#    - cd ../..
+#    - cd test/uiautomator
+#    - chmod a+x run_test.sh
+#    - ./run_test.sh

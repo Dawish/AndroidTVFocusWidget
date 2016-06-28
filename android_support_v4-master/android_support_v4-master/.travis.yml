@@ -1,0 +1,48 @@
+language: android
+sudo: false
+env:
+    matrix:
+      - ANDROID_TARGET=android-22  ANDROID_ABI=armeabi-v7a
+
+android:
+  components:
+  #  - build-tools-19.0.0
+    - build-tools-23
+    
+    - android-22
+    - sys-img-armeabi-v7a-android-22
+    - sys-img-x86-android-22
+    
+script:
+
+    - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+    - emulator -avd test -no-skin -no-audio -no-window &
+    
+    - android-wait-for-emulator
+    - adb shell input keyevent 82 &
+
+    - export LIB_DIR=./android_common_lib
+    - echo yes | git clone https://github.com/luoqii/android_common_lib $LIB_DIR
+    - source $LIB_DIR/buildscript/lib/common.sh
+    
+    - cd sample
+    - rm -f project.properties > /dev/null 2>&1
+    - update_lib_project . ../library
+    - update_lib_project . ../$LIB_DIR
+    - cat ../$LIB_DIR/project.properties
+    - cat ../$LIB_DIR/build.xml
+
+    - ant debug  
+
+    - ant installd
+    - adb shell monkey -p org.bangbang.android.support.v4 -v 99999 
+    - exit 0
+    - cd test/unit
+    - chmod a+x run_test.ant
+    - adb devices
+    - ./run_test.ant
+
+    - cd ../..
+    - cd test/uiautomator
+    - chmod a+x run_test.sh
+    - ./run_test.sh
