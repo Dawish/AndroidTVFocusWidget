@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="#7cc23b"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="GridView示例"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+
+
+        />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:clipChildren="false"
+        android:columnWidth="200dp"
+        android:focusable="false"
+        android:gravity="fill_vertical|clip_vertical"
+        android:horizontalSpacing="3dp"
+        android:numColumns="auto_fit"
+        android:scrollbars="vertical"
+        android:smoothScrollbar="true"
+        android:verticalSpacing="6dp" />
+
+
+</LinearLayout>

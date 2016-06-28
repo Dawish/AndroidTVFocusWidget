@@ -1,0 +1,67 @@
+import com.android.builder.core.DefaultManifestParser
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/ASL2.0'
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:22.+'
+    compile 'com.android.support:cardview-v7:22+'
+    compile 'com.android.support:recyclerview-v7:22+'
+    def jarTree = fileTree(dir: 'libs', include: '*.jar')
+    jarTree.exclude("android-support-v4.jar")
+    jarTree.exclude("android-support-v7-recyclerview.jar")
+    compile jarTree
+}
+build.doLast {
+    def today = new Date().format('yyyyMMdd');
+    def time  = new Date().format('yyyyMMddHHmm');
+    def name = 'FocusUIlib';
+    copy{
+        from('build/intermediates/bundles/release')
+        into('output')
+        include('classes.jar')
+        rename('classes.jar', name + '-' + readVersion() + '-' + time + '-release' + '.jar')
+    }
+}
+/**
+ *从Manifest.xml中读取版本号
+ **/
+def readVersion(){
+    def manifestParser = new DefaultManifestParser()
+    return manifestParser.getVersionName(android.sourceSets.main.manifest.srcFile);
+}
