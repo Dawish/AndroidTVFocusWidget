@@ -6,7 +6,7 @@
     android:clipChildren="false"
     android:layout_margin="20dp"
     android:orientation="vertical">
-    <LinearLayout
+    <org.evilbinary.tv.widget.FocusInterceptLinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -22,6 +22,6 @@
             android:layout_marginTop="40dp"
             android:clipToPadding="false"
             android:paddingBottom="80dp" />
-    </LinearLayout>
+    </org.evilbinary.tv.widget.FocusInterceptLinearLayout>
 
 </ScrollView>
