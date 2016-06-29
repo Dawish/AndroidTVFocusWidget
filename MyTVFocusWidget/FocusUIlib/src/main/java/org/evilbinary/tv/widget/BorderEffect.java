@@ -32,7 +32,7 @@ public class BorderEffect implements Effect {
     protected boolean mScalable = true;
     protected float mScale = 1.1f;
 
-    protected long mDurationTraslate = 0;
+    protected long mDurationTraslate = 200;
     /**焦点动画时长默认为200毫秒**/
 //    protected long mDurationTraslate = 200;
     protected int mMargin = 0;

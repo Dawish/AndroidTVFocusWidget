@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:gravity="center"
+    android:focusable="false"
+    android:id="@+id/header"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/vipViewFlow"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/rl01"
+        android:focusable="false"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:focusable="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:text="立即开通VIP"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_below="@+id/userIcon"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/zhangdan"
+            android:layout_width="140dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:background="#FF6F6F"
+            android:focusable="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/vipViewFlow"
+        android:layout_width="540dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:background="#FF8040"
+        android:layout_alignBottom="@+id/function_02"
+        android:layout_centerHorizontal="true">
+    </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/function_01"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:src="#53A9FF"
+            android:layout_alignLeft="@+id/function_03"
+            android:layout_alignStart="@+id/function_03" />
+
+        <ImageView
+            android:id="@+id/function_02"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:src="#ECE966"
+            android:layout_below="@+id/function_03"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp" />
+
+        <ImageView
+            android:id="@+id/function_03"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:src="#53A9FF"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/function_01"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp" />
+</RelativeLayout>

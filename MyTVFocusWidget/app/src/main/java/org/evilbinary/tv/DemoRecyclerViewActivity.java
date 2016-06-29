@@ -8,7 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
 import org.evilbinary.tv.widget.BorderView;
-import org.evilbinary.tv.widget.TvGridLayoutManagerScrolling;
+import org.evilbinary.tv.widget.FocusGridLayoutManager;
+import org.evilbinary.tv.widget.FocusLinearLayoutManager;
 
 /**
  * 作者:evilbinary on 2/20/16.
@@ -32,8 +33,8 @@ public class DemoRecyclerViewActivity extends Activity {
         } else {
             testRecyclerViewGridLayout();
         }
-        border.attachTo((ViewGroup) findViewById(R.id.btn1));
-        border.attachTo((ViewGroup) findViewById(R.id.btn2));
+        border.attachTo((ViewGroup) findViewById(R.id.header));
+        border.attachTo((ViewGroup) findViewById(R.id.rl01));
     }
 
 
@@ -41,7 +42,7 @@ public class DemoRecyclerViewActivity extends Activity {
         //test linearlayout
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         // 创建一个线性布局管理器
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        FocusLinearLayoutManager layoutManager = new FocusLinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setFocusable(false);
@@ -53,11 +54,10 @@ public class DemoRecyclerViewActivity extends Activity {
     private void testRecyclerViewGridLayout() {
         //test grid
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        GridLayoutManager gridlayoutManager = new TvGridLayoutManagerScrolling(this, 2);
+        FocusGridLayoutManager gridlayoutManager = new FocusGridLayoutManager(this, 4);
         gridlayoutManager.setOrientation(GridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(gridlayoutManager);
         recyclerView.setFocusable(false);
-
         border.attachTo(recyclerView);
         createData(recyclerView);
 
