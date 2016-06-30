@@ -19,13 +19,10 @@ public class MyFragment2 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.activity_main, container, false);
-
-
+        mView = inflater.inflate(R.layout.layout_fragment2, container, false);
         BorderView borderView = new BorderView(getActivity());
         borderView.setBackgroundResource(R.drawable.border_highlight);
-        borderView.attachTo((ViewGroup) mView);
-
+        borderView.attachTo((ViewGroup)mView.findViewById(R.id.contentFragment));
         return mView;
     }
-};
+}

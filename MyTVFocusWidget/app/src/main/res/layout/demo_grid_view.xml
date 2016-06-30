@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:orientation="vertical">
 
     <org.evilbinary.tv.widget.TvGridView
@@ -16,6 +18,7 @@
         android:paddingLeft="20dp"
         android:clipChildren="false"
         android:clipToPadding="false"
+        android:focusable="false"
         android:columnWidth="150dp"
         android:gravity="fill_vertical|clip_vertical"
         android:horizontalSpacing="5dp"

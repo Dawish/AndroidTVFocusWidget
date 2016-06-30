@@ -5,11 +5,15 @@
     android:gravity="center"
     android:clipChildren="false"
     android:layout_margin="20dp"
+    android:scrollbars="none"
     android:orientation="vertical">
     <org.evilbinary.tv.widget.FocusInterceptLinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <VideoView
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
         <include layout="@layout/layout_vip_page_header"></include>
         <android.support.v7.widget.RecyclerView
             android:focusable="false"
